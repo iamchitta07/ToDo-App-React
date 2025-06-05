@@ -30,6 +30,6 @@ A simple and elegant ToDo application built with **React**. The app allows users
 ### Installation
 
 ```bash
-git clone https://github.com/iamchitta07/react-todo-app.git
+git clone https://github.com/iamchitta07/ToDo-App-React.git
 cd react-todo-app
 npm install
