@@ -5,18 +5,13 @@ import App from "./App";
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
 function Layout() {
-    let toDo = [];
 
-    let completedToDo = [];
-
-    let [val, useVal] = useState(toDo);
-    let [completed, useCompleted] = useState(completedToDo);
+    let [val, useVal] = useState([]);
+    let [completed, useCompleted] = useState([]);
 
     let delFromToDo = (idx)=>{
         useVal(prev=>(
-            prev.filter((ele,index)=>{
-                if(index!=idx) return ele;
-            })
+            prev.filter((_,index)=>index!=idx)
         ))
     }
 
@@ -41,9 +36,7 @@ function Layout() {
             time: `${hr}:${min}:${sec}`
         }
         useVal(prev=>(
-            prev.filter((ele,index)=>{
-                if(index!=idx) return ele;
-            })
+            prev.filter((_,index)=>idx!=index)
         ))
 
         useCompleted(prev=>[...prev,data])
@@ -51,9 +44,7 @@ function Layout() {
 
     const complDel = (idx)=>{
         useCompleted((prev)=>(
-            prev.filter((ele,index)=>{
-                if(idx!=index) return ele;
-            })
+            prev.filter((_,index)=>idx!=index)
         ))
     }
 
