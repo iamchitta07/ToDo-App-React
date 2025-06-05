@@ -2,7 +2,6 @@ import Input from "./components/Input";
 import Status from "./components/Status";
 import { Outlet } from "react-router-dom";
 
-
 function App({fillToDo}) {
 
     return (
