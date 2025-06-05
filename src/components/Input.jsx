@@ -27,17 +27,17 @@ function Input({fill}) {
 
     return (
         <>
-            <form className="w-full flex  items-end justify-between pt-20 pb-10" onSubmit={submitForm}>
-                <div className="w-4/10">
-                    <label className="block text-3xl text-white font-bold mb-3 select-none"> Title: </label>
-                    <input type="text" ref={titleRef} className="py-3 px-4 text-2xl focus:outline-2 focus:outline-[#00B84F] focus:drop-shadow-[#00a51A]/30 focus:drop-shadow-xl/25 bg-white rounded-md w-full " placeholder="What is the title of your To-Do ?"/>
+            <form className="w-full lg:flex  lg:items-end lg:justify-between pt-10 pb-5 lg:pt-15 lg:pb-8  md:gap-4 xl:pt-20 xl:pb-10" onSubmit={submitForm}>
+                <div className="lg:w-4/10 mb-3 lg:mb-0">
+                    <label className="text-white font-bold mb-3 select-none md:block text-xl md:text-2xl lg:text-3xl"> Title: </label>
+                    <input type="text" ref={titleRef} className="focus:outline-2 focus:outline-[#00B84F] focus:drop-shadow-[#00a51A]/30 focus:drop-shadow-xl/25 bg-white rounded-md w-full text-md md:text-xl py-2 px-3 xl:py-3 xl:px-4 xl:text-2xl " placeholder="Title of your To-Do ?"/>
                 </div>
-                <div className="w-4/10">
-                    <label className="block text-3xl text-white font-bold mb-3 select-none"> Description: </label>
-                    <input type="text" ref={desRef} className=" py-3 px-4 text-2xl focus:outline-2 focus:outline-[#00B84F] focus:drop-shadow-[#00a51A]/30 focus:drop-shadow-xl/25 bg-white rounded-md w-full " placeholder="What is the description of your To-Do ?"/>
+                <div className="lg:w-4/10">
+                    <label className="text-white font-bold mb-3 select-none md:block text-xl md:text-2xl lg:text-3xl"> Description: </label>
+                    <input type="text" ref={desRef} className="ocus:outline-2 focus:outline-[#00B84F] focus:drop-shadow-[#00a51A]/30 focus:drop-shadow-xl/25 bg-white rounded-md w-full text-md md:text-xl py-2 px-3 xl:py-3 xl:px-4 xl:text-2xl" placeholder="Description of your To-Do ?"/>
                 </div>
                 <div className="pt-8">
-                    <button type='submit' className="px-10 py-3 text-2xl font-semibold bg-[#00B84F] hover:bg-[#00a51A] hover:drop-shadow-md hover:drop-shadow-[#00a51A]/20  rounded-xl text-white ">Add</button>
+                    <button type='submit' className="font-semibold bg-[#00B84F] hover:bg-[#00a51A] hover:drop-shadow-md hover:drop-shadow-[#00a51A]/20  rounded-xl text-white text-md md:text-xl w-full py-2 lg:px-8 xl:px-10 xl:py-3 xl:text-2xl">Add</button>
                 </div>
             </form>
         </>
